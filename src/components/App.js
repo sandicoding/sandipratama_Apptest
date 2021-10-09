@@ -22,9 +22,8 @@ class App extends Component {
     getCustomers = async () => {
         // this.setState({ loader: true })
         // const customers = await axios.get(this.state.url)
-        if (this.props.contacts.contacts.lenght) {
-            this.setState({ customers: this.props.contacts.contacts })
-        }
+        const { listContactAction } = this.props
+        listContactAction()
     }
 
     deleteCustomer = async (id) => {
